@@ -512,14 +512,14 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
       // Acts like case 5 after: always shows loading animation on open
       return (
         <div style={{ marginBottom: 18, maxWidth: 320, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ fontSize: 13, color: '#888', marginBottom: 8 }}>User opens filter dropdown:</div>
+          <div style={{ fontSize: 13, color: '#888', marginBottom: 8 }}>No caching. Dropdown loads every time:</div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 140, position: 'relative' }}>
             <button
               style={{ width: 140, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}
               onClick={() => {
                 setOpen(o => !o);
                 setLoading(true);
-                setTimeout(() => setLoading(false), 200);
+                setTimeout(() => setLoading(false), 500);
               }}
             >
               Status ▼
@@ -540,10 +540,13 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
         </div>
       );
     }
+  
     // After: first open shows loading, subsequent opens are instant (cached)
     return (
       <div style={{ marginBottom: 18, maxWidth: 320, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ fontSize: 13, color: '#888', marginBottom: 8 }}>User opens filter dropdown:</div>
+        <div style={{ fontSize: 13, color: '#888', marginBottom: 8 }}>
+          Caching added. Loads once, then opens instantly:
+        </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 140, position: 'relative' }}>
           <button
             style={{ width: 140, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}
@@ -554,13 +557,15 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
                 setTimeout(() => {
                   setLoading(false);
                   setCached(true);
-                }, 200);
+                }, 500);
               }
             }}
           >
             Status ▼
           </button>
-          <span style={{ fontSize: 11, color: cached ? '#1a7f37' : '#888', marginTop: 4, minHeight: 16, display: 'block', textAlign: 'center', fontWeight: cached ? 500 : undefined }}>{cached ? 'cached' : 'loads on click'}</span>
+          <span style={{ fontSize: 11, color: cached ? '#1a7f37' : '#888', marginTop: 4, minHeight: 16, display: 'block', textAlign: 'center', fontWeight: cached ? 500 : undefined }}>
+            {cached ? 'cached' : 'loads on click'}
+          </span>
           {open && (
             <div style={{ position: 'absolute', top: 36, left: 0, width: 140, background: '#fff', border: '1px solid #bbb', borderRadius: '0 0 6px 6px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', zIndex: 1 }}>
               {loading ? (
@@ -576,6 +581,7 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
       </div>
     );
   }
+  
 
   if (type === 'dropdown-focus-accessibility') {
     // Dropdown options

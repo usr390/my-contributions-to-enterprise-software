@@ -15,7 +15,7 @@ export default function Home() {
         alignItems: 'flex-start',
       }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 8, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>
-          My Contributions to Enterprise Apps
+          My Contributions to Enterprise Apps as QA
         </h1>
       </div>
       <p style={{ color: '#555', marginBottom: 32 }}>

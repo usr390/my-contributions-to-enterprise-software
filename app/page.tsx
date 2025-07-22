@@ -48,7 +48,7 @@ export default function Home() {
         title="Case Study 4 - PDF Report Row Height Optimization"
         beforeDesc="A column with 9-digit IDs was too narrow, causing the last digit to wrap to a new line. This doubled the row height for every entry, resulting in unnecessarily large PDF reports (thousands of pages for big clients)."
         afterDesc="I recommended and helped implement a slightly wider column so the full ID fit on one line, making each row single-height."
-        impactDesc="PDF reports became much more compact, reducing page count by a factor of 2 and saving clients money on printing paper."
+        impactDesc="PDF reports became much more compact, reducing page count by half and saving clients money on printing paper."
         before={<BeforeAfterMockup type="pdf-row-height" show="before" />}
         after={<BeforeAfterMockup type="pdf-row-height" show="after" />}
       />

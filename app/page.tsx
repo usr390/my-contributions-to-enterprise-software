@@ -19,10 +19,9 @@ export default function Home() {
         </h1>
       </div>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        A portfolio of real-world UX, UI, and QA improvements I introduced to enterprise web apps. Each case study highlights my approach to usability, accessibility, and performance, based on my experience as a QA Software Analyst. All examples are anonymized.
-      </p>
+      A portfolio of real-world UX, UI, and QA improvements I introduced to enterprise web apps. Each case study highlights my approach to usability, accessibility, and performance, beyond core testing responsibilities as a QA Software Analyst. All examples are anonymized      </p>
       <CaseStudy
-        title="Case Study 1 - Report Form Sensible Defaults"
+        title="Case Study 1 - Report Form With Good Defaults"
         beforeDesc="The report creation form had many parameters, but no defaults for required fields. Users had to manually select a date range and primary sort every time, which was tedious."
         afterDesc="By analyzing user trends in our database audit log, I identified that most users selected a small date range of just the most recent days and almost always sorted by date descending. Based on this data, I recommended adding default values: a date range of 2 weeks from the current day, and a default sort of date descending. This made the form much faster to complete."
         impactDesc="Reduced time to print from 7 clicks to 1 click (in the average case)"

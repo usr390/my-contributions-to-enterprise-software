@@ -61,7 +61,7 @@ export default function Home() {
         after={<BeforeAfterMockup type="on-demand-filters" show="after" />}
       />
       <CaseStudy
-        title="Case Study 6 - Smart Caching for Dropdown Content"
+        title="Case Study 6 - Caching Dropdown Content"
         beforeDesc="The app’s filter dropdowns were configured to fetch their options from the API every time a dropdown was opened, even for dropdowns whose data rarely or never changed. This resulted in unnecessary network requests and slower perceived performance for users who frequently opened and closed the same filters."
         afterDesc="I identified which filters had static data and recommended caching their results after the first API call. For these filters, the app now served cached data instantly on subsequent openings."
         impactDesc="Reduced redundant network requests for static filter data. Faster, more responsive filter dropdowns for users. Lower server load and improved scalability."

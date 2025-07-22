@@ -12,17 +12,17 @@ export default function Home() {
         padding: '32px 24px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'flex-start',
       }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 8, color: '#fff', textAlign: 'center', letterSpacing: '-0.01em' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 8, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>
           My Contributions to Enterprise Apps
         </h1>
       </div>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, and UI/UX are crucial to a holistic approach to QA engineering.
+        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, and UI/UX are crucial for a holistic approach to QA engineering.
       </p>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity, from small Quality of Life concerns to more significant perfomance optimizations. Exact details have been altered to respect the privacy of my previous workplaces, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
+        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity from small Quality of Life concerns to more significant perfomance optimizations. Exact details have been altered to respect the privacy of my previous workplaces, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
       </p>
       <CaseStudy
         title="Case Study 1 - Report Form Sensible Defaults"

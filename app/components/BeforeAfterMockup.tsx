@@ -445,19 +445,18 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
     if (show === 'before') {
       return (
         <div style={{ marginBottom: 18, maxWidth: 420 }}>
-          <div style={{ display: 'flex', gap: 24, marginBottom: 8, justifyContent: 'center' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 8, justifyContent: 'center' }}>
             {filters.map((label, i) => (
-              <div key={label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 120, position: 'relative' }}>
+              <div key={label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 90px', minWidth: 90, maxWidth: 140, width: 'auto', position: 'relative', marginBottom: 8 }}>
                 <button
-                  style={{ width: 120, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}
+                  style={{ width: '100%', minWidth: 80, maxWidth: 140, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}
                   onClick={() => setOpenDropdown(openDropdown === i ? null : i)}
                 >
                   {label} ▼
                 </button>
                 <span style={{ fontSize: 11, color: '#1a7f37', marginTop: 4, minHeight: 16, display: 'block', textAlign: 'center', fontWeight: 500 }}>loaded on init.</span>
-                {/* Dropdown only open after click */}
                 {openDropdown === i && (
-                  <div style={{ position: 'absolute', top: 36, left: 0, width: 120, background: '#fff', border: '1px solid #bbb', borderRadius: '0 0 6px 6px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', zIndex: 1 }}>
+                  <div style={{ position: 'absolute', top: 36, left: 0, width: '100%', minWidth: 80, maxWidth: 140, background: '#fff', border: '1px solid #bbb', borderRadius: '0 0 6px 6px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', zIndex: 1 }}>
                     {options.map(opt => (
                       <div key={opt} style={{ padding: '7px 12px', fontSize: 13, color: '#444', cursor: 'pointer' }}>{opt}</div>
                     ))}
@@ -470,14 +469,14 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
         </div>
       );
     }
-    // After: Click to load dropdown options with animated dots
+    // After: Responsive dropdowns
     return (
       <div style={{ marginBottom: 18, maxWidth: 420 }}>
-        <div style={{ display: 'flex', gap: 24, marginBottom: 8, justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 8, justifyContent: 'center' }}>
           {filters.map((label, i) => (
-            <div key={label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 90, position: 'relative' }}>
+            <div key={label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 90px', minWidth: 90, maxWidth: 140, width: 'auto', position: 'relative', marginBottom: 8 }}>
               <button
-                style={{ width: 90, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}
+                style={{ width: '100%', minWidth: 80, maxWidth: 140, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}
                 onClick={() => {
                   if (openDropdown === i) return setOpenDropdown(null);
                   setOpenDropdown(i);
@@ -488,9 +487,8 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
                 {label} ▼
               </button>
               <span style={{ fontSize: 11, color: '#888', marginTop: 4, minHeight: 16, display: 'block', textAlign: 'center' }}>loads on click</span>
-              {/* Dropdown opens on click, shows loading then options */}
               {openDropdown === i && (
-                <div style={{ position: 'absolute', top: 36, left: 0, width: 120, background: '#fff', border: '1px solid #bbb', borderRadius: '0 0 6px 6px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', zIndex: 1 }}>
+                <div style={{ position: 'absolute', top: 36, left: 0, width: '100%', minWidth: 80, maxWidth: 140, background: '#fff', border: '1px solid #bbb', borderRadius: '0 0 6px 6px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', zIndex: 1 }}>
                   {loadingDropdown === i ? (
                     <div style={{ padding: '12px', textAlign: 'center' }}><AnimatedDots /></div>
                   ) : (

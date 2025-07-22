@@ -1,103 +1,84 @@
 import Image from "next/image";
+import CaseStudy from './components/CaseStudy';
+import BeforeAfterMockup from './components/BeforeAfterMockup';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main style={{ maxWidth: 700, margin: '0 auto', padding: 32 }}>
+      <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 8 }}>
+        My Contributions to Enterprise Apps
+      </h1>
+      <p style={{ color: '#555', marginBottom: 32 }}>
+        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, UI/UX, and the general look and feel of an app are crucial to a holistic & thorough approach to QA engineering.
+      </p>
+      <p style={{ color: '#555', marginBottom: 32 }}>
+        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity, from small Quality Of Life concerns to more significant perfomance optimizations. Exact details have been altered to preserve the privacy of my previous employers, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
+      </p>
+      <CaseStudy
+        title="Case Study 1 - Report Form Sensible Defaults"
+        beforeDesc="The report creation form had many parameters, but no defaults for required fields. Users had to manually select a date range and primary sort every time, which was tedious."
+        afterDesc="By analyzing user trends in our database audit log, I identified that most users selected a small date range of just the most recent days and almost always sorted by date descending. Based on this data, I recommended adding sensible defaults: a date range of 2 weeks from the current day, and a default sort of date descending. This made the form much faster to complete."
+        impactDesc="Reduced time to print from 7 clicks to 1 click (in the average case)"
+        before={<BeforeAfterMockup type="report-form-defaults" show="before" />}
+        after={<BeforeAfterMockup type="report-form-defaults" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 2 - Visual Indicator When Filtering Data"
+        beforeDesc="A grid of data could be filtered to show only 'priority members', but there were no visual indicators to show which members were priority. Users often missed this context."
+        afterDesc="I recommended we apply the app’s existing pattern of showing icons in both filter labels and data grid rows, adding the star icon for priority members to maintain consistency."
+        impactDesc="Improved user awareness, and promoted use of the company's established UI patterns to ensure consistency across the app."
+        before={<BeforeAfterMockup type="priority-members" show="before" />}
+        after={<BeforeAfterMockup type="priority-members" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 3 - Responsive Button Row"
+        beforeDesc="A row of action buttons (e.g., Print PDF, Print CSV) above a data grid would wrap onto a new line on medium/small screens. The wrapped buttons were misaligned and lacked margin, causing them to touch and appear cluttered. This issue was overlooked as development was done on large desktop screens, but was evident on typical end-user devices like laptops."
+        afterDesc="I recommended and helped implement a responsive layout for the button row, ensuring buttons aligned properly and maintained consistent spacing and margin even when wrapping on smaller screens."
+        impactDesc="Improved usability and visual consistency for users on laptops and smaller devices. The issue was confirmed via end-client screenshots in a support ticket, validating the real-world impact."
+        before={<BeforeAfterMockup type="responsive-buttons" show="before" />}
+        after={<BeforeAfterMockup type="responsive-buttons" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 4 - PDF Report Row Height Optimization"
+        beforeDesc="A column with 9-digit IDs was too narrow, causing the last digit to wrap to a new line. This doubled the row height for every entry, resulting in unnecessarily large PDF reports (thousands of pages for big clients)."
+        afterDesc="I recommended and helped implement a slightly wider column so the full ID fit on one line, making each row single-height."
+        impactDesc="PDF reports became much more compact, reducing page count by a factor of 2 and saving clients money on printing paper."
+        before={<BeforeAfterMockup type="pdf-row-height" show="before" />}
+        after={<BeforeAfterMockup type="pdf-row-height" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 5 - Lazy Loading Dropdown Content"
+        beforeDesc="On a screen with multiple filter dropdowns and a data grid, each filter’s dropdown options were fetched from the API as soon as the page loaded, regardless of whether the user interacted with the filters. This resulted in unnecessary network activity and slower initial load times, especially when many filters were present."
+        afterDesc="I recommended and helped implement a change so that each filter only fetched its dropdown data from the API when the user actually clicked to open that filter. This reduced unnecessary network requests."
+        impactDesc="More efficient use of resources, especially for users who didn’t interact with all filters. Reduced initial network traffic and server load. Faster page load for users"
+        before={<BeforeAfterMockup type="on-demand-filters" show="before" />}
+        after={<BeforeAfterMockup type="on-demand-filters" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 6 - Smart Caching for Dropdown Content"
+        beforeDesc="The app’s filter dropdowns were configured to fetch their options from the API every time a dropdown was opened, even for dropdowns whose data rarely or never changed. This resulted in unnecessary network requests and slower perceived performance for users who frequently opened and closed the same filters."
+        afterDesc="I identified which filters had static data and recommended caching their results after the first API call. For these filters, the app now served cached data instantly on subsequent openings."
+        impactDesc="Reduced redundant network requests for static filter data. Faster, more responsive filter dropdowns for users. Lower server load and improved scalability."
+        before={<BeforeAfterMockup type="filter-caching" show="before" />}
+        after={<BeforeAfterMockup type="filter-caching" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 7 - Accessibility: Dropdown Focus Order for Screen Readers and Mobile Gestures"
+        beforeDesc="In the mobile app, when a user navigated to a dropdown and opened it, the next swipe gesture did not move focus to the first dropdown option. Instead, it skipped to the next UI element outside the dropdown. Only after swiping through all other UI elements could the user finally reach the dropdown options. This made dropdowns very difficult to use for those relying on the screen reader's swipe navigation feature."
+        afterDesc="I recommended updating the dropdown logic so that when the dropdown is opened, the next swipe/tab moves focus directly to the first dropdown option, matching accessibility standards."
+        impactDesc="Dropdowns are now accessible and usable for screen reader users. Improved compliance with accessibility standards. Reduced user frustration and increased inclusivity."
+        before={<BeforeAfterMockup type="dropdown-focus-accessibility" show="before" />}
+        after={<BeforeAfterMockup type="dropdown-focus-accessibility" show="after" />}
+      />
+      <CaseStudy
+        title="Case Study 8 - Accessibility: Improving Modal Close Icon Visibility"
+        beforeDesc="In modal dialogs (of which there were roughly 200 across the app), both a 'Cancel' button and an 'X' icon (top right) could close the modal. However, the 'X' icon’s color was nearly identical to its background, resulting in very low contrast. This made it hard to see for many users, especially those with visual impairments. An accessibility color checker confirmed the issue."
+        afterDesc="I recommended updating the 'X' icon’s color to ensure sufficient contrast with its background, following accessibility guidelines. The icon became much more visible and easier to find for all users."
+        impactDesc="Improved accessibility and usability for all users, especially those with low vision. UI elements are now more discoverable and compliant with accessibility standards."
+        before={<BeforeAfterMockup type="modal-accessibility" show="before" />}
+        after={<BeforeAfterMockup type="modal-accessibility" show="after" />}
+      />
+      {/* TODO: Add more CaseStudy components here */}
+    </main>
   );
 }

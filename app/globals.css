@@ -24,3 +24,57 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.wire-box {
+  background: #e9e9ee;
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.wire-label {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.wire-input {
+  background: #fff;
+  border: 1.5px solid #bbb;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wire-alert {
+  background: #fffbe6;
+  border: 2px solid #ffd700;
+  color: #b38b00;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wire-validate {
+  color: #1a7f37;
+  font-size: 0.95rem;
+  margin-left: 8px;
+}
+
+.wire-error {
+  color: #b00020;
+  font-size: 0.95rem;
+  margin-left: 8px;
+}

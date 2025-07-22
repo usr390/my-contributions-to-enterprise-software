@@ -9,10 +9,10 @@ export default function Home() {
         My Contributions to Enterprise Apps
       </h1>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, UI/UX, and the general look and feel of an app are crucial to a holistic & thorough approach to QA engineering.
+        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, and UI/UX are crucial to a holistic & thorough approach to QA engineering.
       </p>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity, from small Quality Of Life concerns to more significant perfomance optimizations. Exact details have been altered to preserve the privacy of my previous employers, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
+        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity, from small Quality of Life concerns to more significant perfomance optimizations. Exact details have been altered to preserve the privacy of my previous workplaces, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
       </p>
       <CaseStudy
         title="Case Study 1 - Report Form Sensible Defaults"

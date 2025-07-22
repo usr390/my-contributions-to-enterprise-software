@@ -19,11 +19,7 @@ export default function Home() {
         </h1>
       </div>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, and UI/UX are crucial for a holistic approach to QA engineering.
-      </p>
-      <p style={{ color: '#555', marginBottom: 32 }}>
-        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity from small Quality of Life concerns to more significant perfomance optimizations. Exact details have been altered to respect the privacy of my previous workplaces, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
-      </p>
+      A collection of real UX/QA case studies from enterprise software, anonymized for confidentiality. Demonstrates my ability to identify, recommend, and help implement meaningful product improvements      </p>
       <CaseStudy
         title="Case Study 1 - Report Form Sensible Defaults"
         beforeDesc="The report creation form had many parameters, but no defaults for required fields. Users had to manually select a date range and primary sort every time, which was tedious."

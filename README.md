@@ -1,0 +1,2 @@
+# my-contributions-to-enterprise-software
+A portfolio of real-world UX, UI, and QA improvements I introduced to enterprise web apps. Each case study highlights my approach to usability, accessibility, and performance, based on my experience as a QA Software Analyst. All examples are anonymized.

@@ -5,14 +5,24 @@ import BeforeAfterMockup from './components/BeforeAfterMockup';
 export default function Home() {
   return (
     <main style={{ maxWidth: 700, margin: '0 auto', padding: 32 }}>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 8 }}>
-        My Contributions to Enterprise Apps
-      </h1>
+      <div style={{
+        width: '100%',
+        marginBottom: 32,
+        background: 'linear-gradient(90deg, #059669 0%, #2563eb 100%)',
+        padding: '32px 24px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 8, color: '#fff', textAlign: 'center', letterSpacing: '-0.01em' }}>
+          My Contributions to Enterprise Apps
+        </h1>
+      </div>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, and UI/UX are crucial to a holistic & thorough approach to QA engineering.
+        Aside from executing test plans & writing automation scripts, I also believe a good-faith consideration of performance, interaction design, and UI/UX are crucial to a holistic approach to QA engineering.
       </p>
       <p style={{ color: '#555', marginBottom: 32 }}>
-        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity, from small Quality of Life concerns to more significant perfomance optimizations. Exact details have been altered to preserve the privacy of my previous workplaces, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
+        Following are several case studies that depict the kind of recommendations I introduced at my previous workplaces as a QA Software Analyst, and are based on my personal experience while on the job. They range in severity, from small Quality of Life concerns to more significant perfomance optimizations. Exact details have been altered to respect the privacy of my previous workplaces, but I am sure you will still find it valuable to understand my thought processes behind the recommendations I made.
       </p>
       <CaseStudy
         title="Case Study 1 - Report Form Sensible Defaults"

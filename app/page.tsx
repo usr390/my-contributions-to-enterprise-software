@@ -31,7 +31,7 @@ export default function Home() {
       <CaseStudy
         title="Case Study 2 - Visual Indicator When Filtering Data"
         beforeDesc="The data grid could be filtered to show only priority members, but there were no visual indicators in the grid itself to reflect this. Since the app consistently used icons in both filter labels and data rows to signal context, users often overlooked that they were viewing a filtered subset."
-        afterDesc="I recommended we apply the app’s existing pattern of showing icons in both filter labels and data grid rows, adding the star icon for priority members to maintain consistency."
+        afterDesc="I recommended applying the app’s existing pattern of showing icons in both filter labels and data grid rows, adding the star icon for priority members to maintain consistency."
         impactDesc="Improved user awareness, and promoted use of the company's established UI patterns to ensure consistency across the app."
         before={<BeforeAfterMockup type="priority-members" show="before" />}
         after={<BeforeAfterMockup type="priority-members" show="after" />}

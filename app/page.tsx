@@ -71,7 +71,7 @@ export default function Home() {
       <CaseStudy
         title="Case Study 7 - Accessibility: Dropdown Focus Order for Screen Readers and Mobile Gestures"
         beforeDesc="In the mobile app, when a user navigated to a dropdown and opened it, the next swipe gesture did not move focus to the first dropdown option. Instead, it skipped to the next UI element outside the dropdown. Only after swiping through all other UI elements could the user finally reach the dropdown options. This made dropdowns very difficult to use for those relying on the screen reader's swipe navigation feature."
-        afterDesc="I recommended updating the dropdown logic so that when the dropdown was opened, the next swipe/tab moved focus directly to the first dropdown option, matching accessibility standards."
+        afterDesc="I recommended and helped implement logic so that when the dropdown was opened, the next swipe/tab moved focus directly to the first dropdown option, matching accessibility standards."
         impactDesc="Dropdowns are now accessible and usable for screen reader users. Improved compliance with accessibility standards. Reduced user frustration and increased inclusivity."
         before={<BeforeAfterMockup type="dropdown-focus-accessibility" show="before" />}
         after={<BeforeAfterMockup type="dropdown-focus-accessibility" show="after" />}

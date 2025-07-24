@@ -512,7 +512,7 @@ export default function BeforeAfterMockup({ type, show }: BeforeAfterMockupProps
       // Acts like case 5 after: always shows loading animation on open
       return (
         <div style={{ marginBottom: 18, maxWidth: 320, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ fontSize: 13, color: '#888', marginBottom: 8 }}>No caching. Dropdown loads every time:</div>
+          <div style={{ fontSize: 13, color: '#888', marginBottom: 8 }}>No caching. Dropdown loads every time it is opened:</div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 140, position: 'relative' }}>
             <button
               style={{ width: 140, padding: '6px 0', border: '1px solid #bbb', borderRadius: 4, background: '#fff', fontSize: 13, cursor: 'pointer' }}

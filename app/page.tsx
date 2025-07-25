@@ -23,7 +23,7 @@ export default function Home() {
       <CaseStudy
         title="Case Study 1 - Report Form With Good Defaults"
         beforeDesc="The report creation form had many parameters, but no defaults for required fields. Users had to manually select a date range and a 'Sort By' option every time, which was tedious."
-        afterDesc="By analyzing user trends in our database audit log, I identified that most users selected a small date range of just the most recent days and almost always sorted by date descending. Based on this data, I recommended adding default values: a date range of 2 weeks from the current day, and a default sort of date descending. This made the form much faster to complete."
+        afterDesc="By analyzing user trends in the database audit log, I identified that most users selected a small date range of just the most recent days and almost always sorted by date descending. Based on this data, I recommended adding default values: a date range of 2 weeks from the current day, and a default sort of date descending. This made the form much faster to complete."
         impactDesc="Reduced time to print from 7 clicks to ~3 clicks (in the average case)"
         before={<BeforeAfterMockup type="report-form-defaults" show="before" />}
         after={<BeforeAfterMockup type="report-form-defaults" show="after" />}
